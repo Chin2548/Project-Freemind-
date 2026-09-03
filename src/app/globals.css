@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-obsidian: #120d0a;
+  --color-chocolate: #241712;
+  --color-espresso: #34231b;
+  --color-walnut: #50382b;
+  --color-cognac: #765640;
+  --color-taupe: #a58f7a;
+  --color-cream: #e8ddcc;
+  --color-ivory: #f3ebdd;
+  --color-brass: #b4976a;
+  --color-oxblood: #3a1715;
+
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-obsidian: var(--color-obsidian);
+  --color-chocolate: var(--color-chocolate);
+  --color-espresso: var(--color-espresso);
+  --color-walnut: var(--color-walnut);
+  --color-cognac: var(--color-cognac);
+  --color-taupe: var(--color-taupe);
+  --color-cream: var(--color-cream);
+  --color-ivory: var(--color-ivory);
+  --color-brass: var(--color-brass);
+  --color-oxblood: var(--color-oxblood);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), Inter, -apple-system, sans-serif;
+
+  --animate-fade-up: fade-up 1s var(--ease-reveal) forwards;
+  --animate-fade-in: fade-in 1.2s var(--ease-reveal) forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
 
+* {
+  border-color: var(--color-walnut);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-obsidian);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-cognac);
+  color: var(--color-ivory);
+}
+
+/* Thin, editorial scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-espresso);
+  border: 2px solid var(--color-obsidian);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visibility, kept quiet and on-brand */
+:focus-visible {
+  outline: 1px solid var(--color-brass);
+  outline-offset: 3px;
 }

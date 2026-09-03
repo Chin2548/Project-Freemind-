@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow-cocktail-last-light" cx="0.55" cy="0.3" r="0.9" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-cocktail-last-light" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-cocktail-last-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-cocktail-last-light">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#base-cocktail-last-light)"/>
+  <rect width="1200" height="1500" fill="url(#glow-cocktail-last-light)"/>
+  <rect x="0.10330751547897934" y="201.11205119277543" width="1.8127261128395107" height="833.7439078686238" fill="#B4976A" opacity="0.07302198057344368" /><rect x="490.2612592002947" y="232.87085016059766" width="9.50068835122575" height="950.633913977662" fill="#B4976A" opacity="0.04408109275072915" /><rect x="262.2274224294605" y="321.1110416763565" width="7.845277879243044" height="705.4641051268802" fill="#B4976A" opacity="0.05940389926489806" /><circle cx="992.0425519273081" cy="915.6806602638035" r="14.032321149513423" fill="#B4976A" opacity="0.11046010211152965" /><circle cx="882.3175350970753" cy="1088.6852180479889" r="25.3079960581921" fill="#B4976A" opacity="0.14702402996553485" /><circle cx="281.7617299796657" cy="853.9645310993908" r="31.1091972804714" fill="#B4976A" opacity="0.08162593170220585" /><circle cx="231.73030189399637" cy="1075.1941632597654" r="29.114316930169533" fill="#B4976A" opacity="0.08189407888976306" /><circle cx="461.01412350406326" cy="1331.7609174589263" r="24.530631613480512" fill="#B4976A" opacity="0.09356610220257762" /><circle cx="732.6917846991604" cy="1391.1950035637199" r="19.69236828358133" fill="#B4976A" opacity="0.20619757371600494" /><circle cx="22.4704530299366" cy="1191.8778867152314" r="31.39327555838346" fill="#B4976A" opacity="0.2128970171910683" /><circle cx="344.29702138928417" cy="737.5310655683568" r="31.18907309620555" fill="#B4976A" opacity="0.21271746587261325" /><circle cx="878.1340970454123" cy="1424.8429483849025" r="31.212611089658566" fill="#B4976A" opacity="0.14040195789225582" /><circle cx="306.05929764551973" cy="1107.802985487788" r="12.575405829190654" fill="#B4976A" opacity="0.21326806812851512" /><circle cx="997.8950453902548" cy="890.1452505869281" r="32.98125964867069" fill="#B4976A" opacity="0.08018047646636188" />
+  <rect width="1200" height="1500" fill="url(#vig-cocktail-last-light)"/>
+  <rect width="1200" height="1500" filter="url(#grain-cocktail-last-light)" opacity="0.5"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow-ingredient-final" cx="0.5" cy="0.32" r="0.95" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#B4976A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#B4976A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#B4976A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-ingredient-final" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-ingredient-final" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-ingredient-final">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#base-ingredient-final)"/>
+  <rect width="1200" height="1500" fill="url(#glow-ingredient-final)"/>
+  <rect x="0.07513258613192716" y="23.536037116810714" width="13.045618994203972" height="633.6319328366145" fill="#B4976A" opacity="0.043106894947688" /><rect x="902.0081886109041" y="169.36061824146717" width="8.818682435731107" height="923.1883010111641" fill="#B4976A" opacity="0.05387715836416665" /><rect x="81.61994338186453" y="69.89893926763808" width="5.978383909890786" height="1085.7920765511617" fill="#B4976A" opacity="0.051384654004485025" /><rect x="285.1218555915373" y="166.1377825458886" width="2.211853700887276" height="646.1891169391471" fill="#B4976A" opacity="0.05673689499659175" /><circle cx="407.86535442607976" cy="1007.6999013849534" r="29.083515425290464" fill="#B4976A" opacity="0.14208887405888074" /><circle cx="923.2021487534066" cy="777.7299317673128" r="29.65725902249781" fill="#B4976A" opacity="0.1123892377246071" /><circle cx="393.59382539390947" cy="1102.8579231843892" r="18.781599445996434" fill="#B4976A" opacity="0.09366180438889359" /><circle cx="119.54873867290908" cy="913.2657902322392" r="33.327721839144566" fill="#B4976A" opacity="0.1676223332412749" /><circle cx="73.33025119577557" cy="642.3092069149103" r="34.279178021735675" fill="#B4976A" opacity="0.20917931120766264" /><circle cx="1171.5733017507691" cy="1309.8318889595866" r="30.75079694646485" fill="#B4976A" opacity="0.0837585351185487" /><circle cx="254.57831719385305" cy="1079.726827300365" r="13.27386586486722" fill="#B4976A" opacity="0.09087198394431918" /><circle cx="218.01568047890038" cy="1005.3152771017657" r="15.16699734252598" fill="#B4976A" opacity="0.19505957679362929" /><circle cx="1082.634563262234" cy="764.3851456948418" r="32.97887602539628" fill="#B4976A" opacity="0.1264880644217954" /><circle cx="1070.5668768571381" cy="749.5314909373703" r="18.567955507494467" fill="#B4976A" opacity="0.1478320468196944" /><circle cx="284.66968600141786" cy="629.8511049406147" r="15.128057009659763" fill="#B4976A" opacity="0.15731689407240312" /><circle cx="1071.764275312204" cy="1385.24612086848" r="15.099745377059788" fill="#B4976A" opacity="0.18162084224784827" /><circle cx="698.5367993810556" cy="1086.7438962443211" r="12.13576218871005" fill="#B4976A" opacity="0.09023920572385118" /><circle cx="259.9852823279661" cy="856.1951168172016" r="17.711499580844773" fill="#B4976A" opacity="0.18017932392673505" /><circle cx="633.4075564829703" cy="930.5542922746896" r="14.210738329413104" fill="#B4976A" opacity="0.10262909231020985" /><circle cx="747.0460822312591" cy="602.4114785738396" r="15.046598634725994" fill="#B4976A" opacity="0.1510699373027961" />
+  <rect width="1200" height="1500" fill="url(#vig-ingredient-final)"/>
+  <rect width="1200" height="1500" filter="url(#grain-ingredient-final)" opacity="0.5"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="glow-hero-main" cx="0.65" cy="0.35" r="0.9" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-hero-main" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-hero-main" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-hero-main">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#base-hero-main)"/>
+  <rect width="1920" height="1080" fill="url(#glow-hero-main)"/>
+  <rect x="0.015025734915422029" y="42.618243227357276" width="14.20912379213527" height="840.0268739238633" fill="#B4976A" opacity="0.056638361859729855" /><rect x="420.40163705162854" y="15.242455509717068" width="20.56373648379346" height="798.5869470281405" fill="#B4976A" opacity="0.07673464479552083" /><rect x="736.323988229338" y="168.29090447750954" width="1.9956767702434925" height="880.7212868581724" fill="#B4976A" opacity="0.032673081730187944" /><rect x="1017.0243707830313" y="217.4524003914114" width="12.04237073347193" height="436.1570203044983" fill="#B4976A" opacity="0.03334211185420129" /><rect x="801.573070438181" y="222.51435875754277" width="27.79657104722836" height="750.047387039333" fill="#B4976A" opacity="0.07230834452184695" /><rect x="1011.7032525424876" y="29.796624468450084" width="12.980781469476204" height="785.1162395543571" fill="#B4976A" opacity="0.0650595297152731" /><circle cx="1747.8159944599645" cy="884.7456355073915" r="29.278194943515768" fill="#B4976A" opacity="0.08664503185697368" /><circle cx="1413.2772181679281" cy="626.9711301354423" r="43.493321000312754" fill="#B4976A" opacity="0.1858974680173187" /><circle cx="1902.7917802173567" cy="649.011170235473" r="28.68629319359203" fill="#B4976A" opacity="0.21755704006883975" /><circle cx="1387.5079692411311" cy="879.4933659122264" r="44.21831326430506" fill="#B4976A" opacity="0.09017602355235818" /><circle cx="1212.7386584251549" cy="957.5160343418978" r="29.67206271073973" fill="#B4976A" opacity="0.14109759675441086" /><circle cx="1471.669973313501" cy="715.7726682683199" r="28.33053823963789" fill="#B4976A" opacity="0.11848695759520583" /><circle cx="689.7887596951692" cy="530.9052768162501" r="37.88226749848785" fill="#B4976A" opacity="0.20567188011079274" /><circle cx="1745.6795550749446" cy="467.9752103034176" r="53.93867874400567" fill="#B4976A" opacity="0.15063320523186885" /><circle cx="991.2805697613215" cy="621.5055668619514" r="57.08705710124882" fill="#B4976A" opacity="0.14915673586461392" /><circle cx="510.9974532118043" cy="485.89533930727777" r="55.59414719752423" fill="#B4976A" opacity="0.09032487046935118" />
+  <rect width="1920" height="1080" fill="url(#vig-hero-main)"/>
+  <rect width="1920" height="1080" filter="url(#grain-hero-main)" opacity="0.5"/>
+</svg>

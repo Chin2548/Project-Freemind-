@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000">
+  <defs>
+    <radialGradient id="glow-story-hospitality" cx="0.45" cy="0.35" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-story-hospitality" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-story-hospitality" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-story-hospitality">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="2000" fill="url(#base-story-hospitality)"/>
+  <rect width="1600" height="2000" fill="url(#glow-story-hospitality)"/>
+  <rect x="0.2880096438229174" y="15.22147610338542" width="14.174872816703164" height="1178.9224101965526" fill="#B4976A" opacity="0.0426823230066172" /><rect x="57.698056155534516" y="49.21570350342961" width="15.97161601760575" height="1413.8884877915389" fill="#B4976A" opacity="0.05489683032026219" /><rect x="1312.8764514931258" y="567.9459345228466" width="20.083805008869437" height="912.2029601709945" fill="#B4976A" opacity="0.04148088028326712" /><circle cx="292.9671141253478" cy="1280.0794168655568" r="21.665865039141725" fill="#B4976A" opacity="0.19459839541893303" /><circle cx="859.7943403383665" cy="1462.3951535787387" r="41.46471629428186" fill="#B4976A" opacity="0.1565047899694227" /><circle cx="640.0630055368533" cy="1308.0223295912356" r="19.819580290298518" fill="#B4976A" opacity="0.09612694818165801" /><circle cx="64.21781188269874" cy="1424.78372810854" r="20.076277498226872" fill="#B4976A" opacity="0.211233074172617" /><circle cx="848.8878600754662" cy="840.0607392099321" r="18.933882075300332" fill="#B4976A" opacity="0.21018366836028518" /><circle cx="879.0195212504077" cy="1405.755767324712" r="28.718117651267082" fill="#B4976A" opacity="0.1911403814061921" /><circle cx="644.4630822580895" cy="1550.0838055276163" r="35.1570106476145" fill="#B4976A" opacity="0.16696649047263573" /><circle cx="523.4947269069913" cy="1883.4199412571452" r="37.496809845321636" fill="#B4976A" opacity="0.15386379225539398" /><circle cx="557.2223310891748" cy="1099.5621587611383" r="17.198794544859595" fill="#B4976A" opacity="0.168113184737147" /><circle cx="1580.5289521632055" cy="1315.6931718026226" r="26.331434453214925" fill="#B4976A" opacity="0.1168332333181363" />
+  <rect width="1600" height="2000" fill="url(#vig-story-hospitality)"/>
+  <rect width="1600" height="2000" filter="url(#grain-story-hospitality)" opacity="0.5"/>
+</svg>

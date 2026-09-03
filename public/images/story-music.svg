@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000">
+  <defs>
+    <radialGradient id="glow-story-music" cx="0.55" cy="0.4" r="0.8" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#B4976A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#B4976A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#B4976A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-story-music" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-story-music" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-story-music">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="2000" fill="url(#base-story-music)"/>
+  <rect width="1600" height="2000" fill="url(#glow-story-music)"/>
+  <rect x="0.2754874530020053" y="536.2988034601312" width="3.1672696454145663" height="1423.3170881153244" fill="#B4976A" opacity="0.06604396114688735" /><rect x="1307.3633586125106" y="20.988933761593824" width="23.668502281111202" height="1735.0237710727602" fill="#B4976A" opacity="0.05816218552474137" /><rect x="699.2731272236193" y="256.2961111369507" width="19.254074355823988" height="1081.2376141373418" fill="#B4976A" opacity="0.038807798529796114" /><rect x="1045.4468051394883" y="459.17186975402" width="11.443463592271751" height="969.3600962584468" fill="#B4976A" opacity="0.0535264612580896" /><circle cx="295.5063003073505" cy="919.8996386676092" r="46.63955657057423" fill="#B4976A" opacity="0.14574440372711459" /><circle cx="985.0745456154222" cy="1451.6764173765448" r="16.74328307876669" fill="#B4976A" opacity="0.1340704038404584" /><circle cx="243.17736052272596" cy="1268.8123852655408" r="16.865864650221415" fill="#B4976A" opacity="0.1875699622161407" /><circle cx="1238.3453768103805" cy="848.6412312357139" r="22.2016467360795" fill="#B4976A" opacity="0.1109614164298041" /><circle cx="1468.877589580489" cy="1505.1337598405162" r="41.69031941303082" fill="#B4976A" opacity="0.0852431057721778" /><circle cx="695.7687727136247" cy="1477.7169261851507" r="44.75292214448836" fill="#B4976A" opacity="0.16033597172269223" /><circle cx="533.4538308283816" cy="1458.9983671521752" r="44.67084154176604" fill="#B4976A" opacity="0.1448979559772629" /><circle cx="1599.3908300990154" cy="1461.156016552035" r="43.61232362278954" fill="#B4976A" opacity="0.15141383618248053" /><circle cx="369.66006492232907" cy="852.745534854704" r="44.92254543017833" fill="#B4976A" opacity="0.17284217725772616" /><circle cx="1125.4118818095064" cy="1623.2821344614795" r="16.082503542380877" fill="#B4976A" opacity="0.12653812880305398" /><circle cx="1443.7888501619816" cy="909.4540523453188" r="27.46954239482949" fill="#B4976A" opacity="0.08262145871540667" /><circle cx="1129.8023428114152" cy="1754.2357765177599" r="43.365733082746836" fill="#B4976A" opacity="0.21945731623047715" /><circle cx="1361.3015984755955" cy="1484.7276199466808" r="16.497794718013886" fill="#B4976A" opacity="0.14315781587097592" />
+  <rect width="1600" height="2000" fill="url(#vig-story-music)"/>
+  <rect width="1600" height="2000" filter="url(#grain-story-music)" opacity="0.5"/>
+</svg>

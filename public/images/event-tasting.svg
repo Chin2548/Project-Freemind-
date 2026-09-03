@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="glow-event-tasting" cx="0.45" cy="0.35" r="0.75" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#A58F7A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#A58F7A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#A58F7A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-event-tasting" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-event-tasting" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-event-tasting">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#base-event-tasting)"/>
+  <rect width="1600" height="1000" fill="url(#glow-event-tasting)"/>
+  <rect x="0.21287649889744492" y="70.84271942343815" width="20.12925382249919" height="822.6452386217613" fill="#B4976A" opacity="0.03285215177838891" /><rect x="1155.6898679171593" y="239.9275426659058" width="14.152933576286706" height="670.350093273772" fill="#B4976A" opacity="0.0744889615471372" /><rect x="831.2565073662032" y="249.0234975228305" width="15.105421090596748" height="463.2054417517087" fill="#B4976A" opacity="0.07544238978572412" /><circle cx="7.8452579750169615" cy="625.2467409709905" r="20.187813285913144" fill="#B4976A" opacity="0.15252924876523133" /><circle cx="218.10885986137097" cy="453.4938609492908" r="37.60435551926899" fill="#B4976A" opacity="0.08176440993488246" /><circle cx="1307.8726564607327" cy="611.6604260976058" r="46.64925500624744" fill="#B4976A" opacity="0.15887643997452822" /><circle cx="186.59577387068026" cy="439.5939863189999" r="45.44768337667704" fill="#B4976A" opacity="0.14656357653119004" /><circle cx="1531.786679412971" cy="653.9354906221251" r="41.820695454087755" fill="#B4976A" opacity="0.1518748852814314" /><circle cx="927.9709504246441" cy="815.1706096857513" r="43.48730435547168" fill="#B4976A" opacity="0.19866897756109853" /><circle cx="337.2118431490025" cy="509.8135801589243" r="38.50735569606289" fill="#B4976A" opacity="0.11993175379925572" /><circle cx="1291.2787114188807" cy="441.69867370901505" r="23.5411203126806" fill="#B4976A" opacity="0.18329062906400362" /><circle cx="64.03389653566657" cy="749.8381891519188" r="29.407804665535508" fill="#B4976A" opacity="0.08425757128210512" />
+  <rect width="1600" height="1000" fill="url(#vig-event-tasting)"/>
+  <rect width="1600" height="1000" filter="url(#grain-event-tasting)" opacity="0.5"/>
+</svg>

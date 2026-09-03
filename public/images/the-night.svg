@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200">
+  <defs>
+    <radialGradient id="glow-the-night" cx="0.6" cy="0.3" r="0.95" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3A1715" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#3A1715" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3A1715" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-the-night" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-the-night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-the-night">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1920" height="1200" fill="url(#base-the-night)"/>
+  <rect width="1920" height="1200" fill="url(#glow-the-night)"/>
+  <rect x="0.36063820157259535" y="56.48648941562183" width="1.2189711721790686" height="560.7166393666683" fill="#B4976A" opacity="0.06932068488963011" /><rect x="489.6393053323397" y="46.46548394715924" width="9.729675704920362" height="655.6519227061905" fill="#B4976A" opacity="0.051631475115783025" /><rect x="391.77573002108903" y="167.75745457760752" width="24.89624279429786" height="1045.9009840021852" fill="#B4976A" opacity="0.04415396203673814" /><rect x="1368.5849086275184" y="38.730678277770686" width="6.816897791081012" height="590.8538812127466" fill="#B4976A" opacity="0.060210685013058304" /><rect x="37.75370213925252" y="173.71623470794057" width="10.517705146891721" height="561.2636568967846" fill="#B4976A" opacity="0.04540026859417583" /><rect x="1240.8780708544684" y="74.57665601240159" width="29.338755455183566" height="896.4330570180277" fill="#B4976A" opacity="0.07142871332953565" /><rect x="1627.5838688272831" y="105.3910627638838" width="5.007471863187357" height="659.3231085681572" fill="#B4976A" opacity="0.06329826149465353" /><rect x="1685.0331399636652" y="65.99722641147414" width="23.605040878248435" height="572.3109974640524" fill="#B4976A" opacity="0.06840640486535282" /><circle cx="1783.551848403692" cy="863.5965335030077" r="32.40382534303127" fill="#B4976A" opacity="0.09127560548603125" /><circle cx="1221.9759243186338" cy="971.3443858282124" r="25.314556187125444" fill="#B4976A" opacity="0.11261595196334268" /><circle cx="1046.475268086861" cy="792.7566653515739" r="34.40158727988748" fill="#B4976A" opacity="0.14517873038088785" /><circle cx="1356.6459036587232" cy="874.5243502822932" r="43.098604921902165" fill="#B4976A" opacity="0.21946419339577128" /><circle cx="1298.7210089142632" cy="838.8755788643617" r="50.726186471736234" fill="#B4976A" opacity="0.14349614052427573" /><circle cx="1366.4144945949452" cy="551.6426524721484" r="34.214673682129636" fill="#B4976A" opacity="0.1719506822824019" /><circle cx="1304.46852149858" cy="1044.590690084352" r="34.078777845649775" fill="#B4976A" opacity="0.10486252674354476" /><circle cx="1432.9766379231369" cy="988.1853512937067" r="19.85165854157103" fill="#B4976A" opacity="0.1107176173019387" /><circle cx="1247.9293569623767" cy="1094.8682809759568" r="46.61519802381768" fill="#B4976A" opacity="0.10053797178020513" /><circle cx="1120.356272012327" cy="613.3303017665914" r="29.811544016945682" fill="#B4976A" opacity="0.1478872770610147" /><circle cx="1665.8211956041132" cy="485.787549191888" r="33.82367348244755" fill="#B4976A" opacity="0.1532098119735809" /><circle cx="1608.8278311573229" cy="551.9677391387222" r="44.90451238165099" fill="#B4976A" opacity="0.13738431473950327" /><circle cx="1895.0190639263196" cy="694.9838640680387" r="42.112399957061186" fill="#B4976A" opacity="0.1292413524438081" /><circle cx="814.7826288778173" cy="690.255443305015" r="26.370277643921114" fill="#B4976A" opacity="0.12249804192455305" /><circle cx="1708.6819068609568" cy="609.5285286749979" r="37.00279809106402" fill="#B4976A" opacity="0.21572590833131777" /><circle cx="1718.9671940719402" cy="631.811116795811" r="53.49492156719315" fill="#B4976A" opacity="0.11918108516296474" /><circle cx="1323.4165436433782" cy="955.0122035620848" r="29.0971179935123" fill="#B4976A" opacity="0.19106061469862295" /><circle cx="1587.4486797931127" cy="1115.9250856339236" r="54.86047637803524" fill="#B4976A" opacity="0.21426330705570368" /><circle cx="595.2237265885096" cy="729.2817046207206" r="57.46110690223156" fill="#B4976A" opacity="0.10925309799542009" /><circle cx="1602.0874390025506" cy="549.9839948396981" r="25.07670622419259" fill="#B4976A" opacity="0.0982355998440046" />
+  <rect width="1920" height="1200" fill="url(#vig-the-night)"/>
+  <rect width="1920" height="1200" filter="url(#grain-the-night)" opacity="0.5"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow-ingredient-jasmine" cx="0.45" cy="0.3" r="0.7" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#B4976A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#B4976A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#B4976A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-ingredient-jasmine" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-ingredient-jasmine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-ingredient-jasmine">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#base-ingredient-jasmine)"/>
+  <rect width="1200" height="1500" fill="url(#glow-ingredient-jasmine)"/>
+  <rect x="0.046957656784875" y="295.9600232503936" width="6.278511867186531" height="1183.5199581538513" fill="#B4976A" opacity="0.06319180934521539" /><rect x="113.7551174627199" y="105.85038632233663" width="8.136676520236467" height="895.742688044666" fill="#B4976A" opacity="0.06367322397760417" /><circle cx="1101.012464893062" cy="1092.5925346255233" r="15.715841524038316" fill="#B4976A" opacity="0.10420047731529966" /><circle cx="320.7698098577278" cy="1135.01329737251" r="20.53792608206899" fill="#B4976A" opacity="0.08538873028511995" /><circle cx="1100.4939044830332" cy="875.7242295082884" r="14.09831692473806" fill="#B4976A" opacity="0.14074089861543934" /><circle cx="1133.859857110176" cy="1138.0505406186455" r="17.540026852432664" fill="#B4976A" opacity="0.16885014428650044" /><circle cx="551.789344243509" cy="822.4157192021755" r="13.919922811835931" fill="#B4976A" opacity="0.15083341607901585" /><circle cx="661.9249826873885" cy="1269.0669136299443" r="19.49435923201438" fill="#B4976A" opacity="0.11322515954563875" /><circle cx="816.4913073335694" cy="1128.9661826486386" r="15.916628137153227" fill="#B4976A" opacity="0.1894873401517862" /><circle cx="1146.22431317924" cy="1282.022016676629" r="17.644666263502714" fill="#B4976A" opacity="0.20778520034419856" /><circle cx="735.9624044373281" cy="1232.5928192190759" r="18.182228962129194" fill="#B4976A" opacity="0.1308801180225612" /><circle cx="189.80830813740224" cy="949.4169051520685" r="20.72519600458927" fill="#B4976A" opacity="0.10548798390243946" />
+  <rect width="1200" height="1500" fill="url(#vig-ingredient-jasmine)"/>
+  <rect width="1200" height="1500" filter="url(#grain-ingredient-jasmine)" opacity="0.5"/>
+</svg>

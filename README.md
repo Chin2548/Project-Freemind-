@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Freemind BKK
 
-## Getting Started
+A cinematic, editorial website for Freemind BKK — a cocktail bar in Bangkok.
+Next.js (App Router) + TypeScript + Tailwind CSS + Framer Motion, with a
+Supabase-backed admin CMS for the menu, events, media, and site settings.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Without Supabase
+configured, the public site runs on realistic sample content and `/admin`
+shows setup instructions instead of the dashboard.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Connecting Supabase
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a project at [supabase.com](https://supabase.com).
+2. Copy `.env.local.example` to `.env.local` and fill in:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY` (server-only — never exposed to the browser)
+3. Run `supabase/schema.sql` in the Supabase SQL editor. It creates the
+   `menu_items`, `events`, and `site_settings` tables, RLS policies, and a
+   public `media` storage bucket.
+4. In Supabase → Authentication → Users, add the one admin account that
+   should be able to sign in at `/admin`. There is no public sign-up flow.
+5. Restart `npm run dev`.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/(site)` — the public, art-directed pages (home, menu, events,
+  story, find us).
+- `src/app/admin` — the auth-gated CMS (`/admin/login`, then
+  overview/menu/events/media/settings).
+- `src/lib/data` — the data-access layer. Each getter reads from Supabase
+  when configured and transparently falls back to the sample data in
+  `src/lib/data/sample-*.ts` otherwise.
+- `src/components` — shared UI, grouped by `home/`, `menu/`, `events/`,
+  `story/`, and `admin/`.
+- `public/images` — generated placeholder "atmosphere" imagery in the
+  brand palette. Swap these for real photography via the admin Media
+  uploader, then paste the resulting URL into the relevant menu item or
+  event.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev      # start the dev server
+npm run build    # production build
+npm run lint     # eslint
+npx tsc --noEmit # type-check
+```

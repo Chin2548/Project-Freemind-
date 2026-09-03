@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000">
+  <defs>
+    <radialGradient id="glow-the-craft" cx="0.7" cy="0.4" r="0.75" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-the-craft" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-the-craft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-the-craft">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="2000" fill="url(#base-the-craft)"/>
+  <rect width="1600" height="2000" fill="url(#glow-the-craft)"/>
+  <rect x="0.037565827404675844" y="236.76801848855618" width="10.022809491514051" height="1066.8159662436842" fill="#B4976A" opacity="0.05991508560247262" /><rect x="1051.0040941191874" y="84.6803089461106" width="1.9093412094836508" height="836.5941501563361" fill="#B4976A" opacity="0.0702039343865625" /><rect x="240.80997131840323" y="334.94946959889444" width="3.4891919479604736" height="1292.896038100958" fill="#B4976A" opacity="0.03801924523712997" /><circle cx="942.5609277026364" cy="814.7929669495607" r="16.739025861713127" fill="#B4976A" opacity="0.10103457326165827" /><circle cx="320.8427394934397" cy="1077.7037153278511" r="17.93018037260527" fill="#B4976A" opacity="0.18737018998467384" /><circle cx="1266.0951745380603" cy="1392.350738441898" r="34.585162642025544" fill="#B4976A" opacity="0.1186252540709686" /><circle cx="1538.8110190060092" cy="1072.7978772230426" r="19.314297053324335" fill="#B4976A" opacity="0.18233474878811723" /><circle cx="458.55058995871855" cy="1666.094878982841" r="20.556593303155708" fill="#B4976A" opacity="0.10915439147423431" /><circle cx="1575.524285412882" cy="1787.707273976605" r="24.615406640447123" fill="#B4976A" opacity="0.21623570192254682" /><circle cx="153.62561880948545" cy="1615.2283223487702" r="46.32482747577581" fill="#B4976A" opacity="0.10351736827149743" /><circle cx="416.10800737152624" cy="1850.011296663444" r="22.977844751419358" fill="#B4976A" opacity="0.20528658159569518" /><circle cx="1046.594216904225" cy="1699.9428902286504" r="25.895494932211466" fill="#B4976A" opacity="0.12192780666232836" /><circle cx="693.1124716001679" cy="1584.6556309933362" r="42.39105666651489" fill="#B4976A" opacity="0.09089129124851086" /><circle cx="799.23456162143" cy="1305.5073636635275" r="38.17500350454357" fill="#B4976A" opacity="0.18186740267264417" /><circle cx="290.70877161874324" cy="1585.3552045629876" r="32.43419788818266" fill="#B4976A" opacity="0.15684262470048166" /><circle cx="1531.3581175462884" cy="1855.9189696385704" r="31.4217617506364" fill="#B4976A" opacity="0.19178069302046738" /><circle cx="435.5178948822598" cy="1727.622024787238" r="23.07991120878599" fill="#B4976A" opacity="0.15029697977965417" />
+  <rect width="1600" height="2000" fill="url(#vig-the-craft)"/>
+  <rect width="1600" height="2000" filter="url(#grain-the-craft)" opacity="0.5"/>
+</svg>

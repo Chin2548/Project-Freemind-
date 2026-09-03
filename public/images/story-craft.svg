@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000">
+  <defs>
+    <radialGradient id="glow-story-craft" cx="0.6" cy="0.35" r="0.8" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-story-craft" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-story-craft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-story-craft">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="2000" fill="url(#base-story-craft)"/>
+  <rect width="1600" height="2000" fill="url(#glow-story-craft)"/>
+  <rect x="0.23792088053926908" y="299.5307846921783" width="18.144460153900514" height="1156.501121405979" fill="#B4976A" opacity="0.03612887552113167" /><rect x="256.3592637482651" y="536.3086248154832" width="22.75916106045168" height="1698.4296204507627" fill="#B4976A" opacity="0.06795825113817887" /><rect x="458.4631551601581" y="521.3466415380561" width="16.764882396687646" height="1588.341576036384" fill="#B4976A" opacity="0.03078855326938308" /><circle cx="102.8858766917939" cy="1627.022127087249" r="20.680497203656003" fill="#B4976A" opacity="0.11988563096140106" /><circle cx="432.0040200203694" cy="1825.4568661334524" r="17.557809101005837" fill="#B4976A" opacity="0.10667786994639586" /><circle cx="1085.2694394861062" cy="884.8880111564771" r="16.37269675766369" fill="#B4976A" opacity="0.18462660939863568" /><circle cx="679.1364534563725" cy="1794.3865581363316" r="26.323881412226598" fill="#B4976A" opacity="0.1214534090566015" /><circle cx="770.8204060521167" cy="1885.2675675742958" r="44.85842433279233" fill="#B4976A" opacity="0.21797781299611352" /><circle cx="378.32047378487925" cy="822.1460683477541" r="27.897575449103094" fill="#B4976A" opacity="0.19615944550946307" /><circle cx="1506.2955900154036" cy="1563.112708891847" r="37.390574013246756" fill="#B4976A" opacity="0.18227666604544657" /><circle cx="502.0173829998983" cy="1216.7382120310685" r="28.193016823560946" fill="#B4976A" opacity="0.08014835008433867" /><circle cx="1295.096708550208" cy="999.6383049521952" r="25.338134625310204" fill="#B4976A" opacity="0.15887610912218328" /><circle cx="123.04565545455148" cy="1369.4856636407653" r="23.143358892894682" fill="#B4976A" opacity="0.1956448449433268" /><circle cx="261.818892007525" cy="1068.2133045682808" r="17.77502221034376" fill="#B4976A" opacity="0.11849355032527219" /><circle cx="241.15555681395864" cy="1007.2496294111476" r="34.749919998226616" fill="#B4976A" opacity="0.19333662327689738" />
+  <rect width="1600" height="2000" fill="url(#vig-story-craft)"/>
+  <rect width="1600" height="2000" filter="url(#grain-story-craft)" opacity="0.5"/>
+</svg>

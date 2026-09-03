@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow-cocktail-generic-1" cx="0.5" cy="0.35" r="0.8" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#B4976A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#B4976A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#B4976A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-cocktail-generic-1" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-cocktail-generic-1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-cocktail-generic-1">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#base-cocktail-generic-1)"/>
+  <rect width="1200" height="1500" fill="url(#glow-cocktail-generic-1)"/>
+  <rect x="0.1126991585946634" y="260.3040558847636" width="10.068428491305959" height="650.4478994295447" fill="#B4976A" opacity="0.04966034243317353" /><rect x="753.0122829163561" y="254.04092746697452" width="3.728023653596662" height="709.782451516746" fill="#B4976A" opacity="0.04081573754624998" /><circle cx="722.4299156315903" cy="792.2220831780901" r="35.318019680043705" fill="#B4976A" opacity="0.1380811456479888" /><circle cx="769.8475444408576" cy="894.0319137708582" r="13.291022603671086" fill="#B4976A" opacity="0.09293295277555748" /><circle cx="721.185370647521" cy="1261.738151357731" r="12.235960632782392" fill="#B4976A" opacity="0.11377815671616995" /><circle cx="81.26365661738781" cy="736.3212974847493" r="15.696064457014263" fill="#B4976A" opacity="0.12524034630063954" /><circle cx="124.29442640793921" cy="1298.7977266998942" r="35.807814772993154" fill="#B4976A" opacity="0.13800019862875362" /><circle cx="1108.619959008526" cy="720.7605925581983" r="15.58646216577521" fill="#B4976A" opacity="0.15974038300080262" /><circle cx="999.5791379358426" cy="1374.5188386640689" r="26.199907547049136" fill="#B4976A" opacity="0.09076961633820982" /><circle cx="1070.938351630176" cy="916.8528399470754" r="35.14719905252308" fill="#B4976A" opacity="0.19068448082607659" /><circle cx="806.3097709848637" cy="633.222765972114" r="31.63734952699146" fill="#B4976A" opacity="0.20211228334541648" />
+  <rect width="1200" height="1500" fill="url(#vig-cocktail-generic-1)"/>
+  <rect width="1200" height="1500" filter="url(#grain-cocktail-generic-1)" opacity="0.5"/>
+</svg>

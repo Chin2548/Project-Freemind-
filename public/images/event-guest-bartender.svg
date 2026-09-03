@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="glow-event-guest-bartender" cx="0.6" cy="0.3" r="0.9" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-event-guest-bartender" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-event-guest-bartender" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-event-guest-bartender">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#base-event-guest-bartender)"/>
+  <rect width="1600" height="1000" fill="url(#glow-event-guest-bartender)"/>
+  <rect x="0.1753099264347087" y="252.45871017916008" width="11.10644431980927" height="689.2372552670886" fill="#B4976A" opacity="0.05293706617591629" /><rect x="104.68577305291387" y="197.58738805315213" width="13.243592355627188" height="652.0530179627734" fill="#B4976A" opacity="0.03428502713729164" /><rect x="590.446535302742" y="81.54876258368488" width="12.616229131460404" height="716.7574227012298" fill="#B4976A" opacity="0.06742314452531109" /><rect x="665.2843302723805" y="118.82741304005256" width="9.827658646579515" height="453.88730327029464" fill="#B4976A" opacity="0.07678956626149785" /><rect x="1351.6858277392441" y="184.44539186027404" width="1.6266622176642178" height="522.8364998221738" fill="#B4976A" opacity="0.07231682335242334" /><circle cx="603.2046174660368" cy="558.1296586507276" r="20.955695097293418" fill="#B4976A" opacity="0.1953587394164491" /><circle cx="1306.669315422577" cy="809.470394704929" r="37.464721774183886" fill="#B4976A" opacity="0.174407867560543" /><circle cx="1063.2051068015444" cy="567.8305111293034" r="35.048933300235255" fill="#B4976A" opacity="0.19997159305025974" /><circle cx="943.5948850061698" cy="880.9878685800246" r="19.671724471889178" fill="#B4976A" opacity="0.14419621574151908" /><circle cx="1209.1264110143543" cy="464.48508574579387" r="33.503414066045934" fill="#B4976A" opacity="0.09697640645967462" /><circle cx="28.163777318004314" cy="863.5873293397831" r="28.34879359262883" fill="#B4976A" opacity="0.1945115348459329" /><circle cx="175.615485921144" cy="802.0097895776944" r="38.02383071745171" fill="#B4976A" opacity="0.1260378899667765" /><circle cx="1357.9132226835127" cy="416.34034040974484" r="26.59522577616873" fill="#B4976A" opacity="0.1935740706916657" /><circle cx="907.5008184718907" cy="800.9023825879231" r="43.132818739053626" fill="#B4976A" opacity="0.1731200609571487" /><circle cx="101.31284156936486" cy="525.4481198503153" r="30.92675763268653" fill="#B4976A" opacity="0.19381853954290837" /><circle cx="1465.077743553629" cy="799.3127055459775" r="24.648336895414012" fill="#B4976A" opacity="0.1176179298736322" /><circle cx="51.979284036885275" cy="405.4446296351446" r="28.09568230444163" fill="#B4976A" opacity="0.20308032855678382" />
+  <rect width="1600" height="1000" fill="url(#vig-event-guest-bartender)"/>
+  <rect width="1600" height="1000" filter="url(#grain-event-guest-bartender)" opacity="0.5"/>
+</svg>

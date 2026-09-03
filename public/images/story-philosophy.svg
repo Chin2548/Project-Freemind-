@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000">
+  <defs>
+    <radialGradient id="glow-story-philosophy" cx="0.5" cy="0.3" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#B4976A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#B4976A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#B4976A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-story-philosophy" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-story-philosophy" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-story-philosophy">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="2000" fill="url(#base-story-philosophy)"/>
+  <rect width="1600" height="2000" fill="url(#glow-story-philosophy)"/>
+  <rect x="0.225398689718357" y="220.60811176952728" width="7.136856982611918" height="1400.8957993247507" fill="#B4976A" opacity="0.059490513661401824" /><rect x="1506.0245662052414" y="508.08185507364743" width="6.4560473127812585" height="1019.5649032663227" fill="#B4976A" opacity="0.07122360634265804" /><rect x="1444.8598316357097" y="209.6968181521602" width="15.935151743642196" height="1757.3762300027313" fill="#B4976A" opacity="0.07811547153919514" /><rect x="855.3655677059345" y="48.41334777736416" width="22.63556112501357" height="938.567351399518" fill="#B4976A" opacity="0.04015801374815219" /><rect x="823.5960640232972" y="217.14529331507654" width="18.94856571960129" height="1401.579571237396" fill="#B4976A" opacity="0.041550201439811106" /><circle cx="775.5487940977782" cy="1520.9048368231438" r="40.65732228072111" fill="#B4976A" opacity="0.1483183792310938" /><circle cx="994.289119722591" cy="1224.3524433806097" r="39.026070854650875" fill="#B4976A" opacity="0.18138154401572565" /><circle cx="1366.9779946720023" cy="1074.4213144056698" r="45.06291424954581" fill="#B4976A" opacity="0.13424919103667995" /><circle cx="984.6219951143693" cy="1722.540233491492" r="34.43507433164406" fill="#B4976A" opacity="0.1425379916769806" /><circle cx="1097.4482427327412" cy="808.6759348480738" r="33.93296094418779" fill="#B4976A" opacity="0.18182680836117532" /><circle cx="493.35342840603874" cy="1206.3674180827732" r="45.59130605830932" fill="#B4976A" opacity="0.2072291162397984" /><circle cx="1368.6484826436717" cy="1676.5966018443896" r="35.173496636723634" fill="#B4976A" opacity="0.11919157282374016" /><circle cx="1517.3170006995247" cy="1313.446589990935" r="47.90814743927507" fill="#B4976A" opacity="0.18602380517499878" /><circle cx="252.50105210812862" cy="1202.3204122225945" r="18.885052653853833" fill="#B4976A" opacity="0.11972579264056477" /><circle cx="130.25936794491426" cy="1122.580879761447" r="39.76297410555461" fill="#B4976A" opacity="0.1863381222694536" />
+  <rect width="1600" height="2000" fill="url(#vig-story-philosophy)"/>
+  <rect width="1600" height="2000" filter="url(#grain-story-philosophy)" opacity="0.5"/>
+</svg>

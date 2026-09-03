@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="glow-event-live-music" cx="0.35" cy="0.35" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3A1715" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#3A1715" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#3A1715" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-event-live-music" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-event-live-music" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-event-live-music">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#base-event-live-music)"/>
+  <rect width="1600" height="1000" fill="url(#glow-event-live-music)"/>
+  <rect x="0.18783211725562077" y="291.92004664048557" width="22.114047491097864" height="567.0399163077027" fill="#B4976A" opacity="0.07957542805892921" /><rect x="455.0204713409957" y="211.70077292407004" width="5.546706092121737" height="491.4853763221627" fill="#B4976A" opacity="0.031019671932812472" /><rect x="1204.0498595722484" y="237.37367427663287" width="13.44595978450585" height="632.2400957180561" fill="#B4976A" opacity="0.07009622627878209" /><rect x="1512.8046400032981" y="20.172228217285337" width="19.029634268981994" height="457.73639637766075" fill="#B4976A" opacity="0.03013167811569914" /><circle cx="419.6633864377285" cy="565.8748767952201" r="42.70878856881409" fill="#B4976A" opacity="0.21391663892559393" /><circle cx="1108.0053719766488" cy="897.1624150612973" r="28.143147554381887" fill="#B4976A" opacity="0.19322982081512907" /><circle cx="383.9845638573026" cy="684.8224040445149" r="36.95399862989225" fill="#B4976A" opacity="0.14061588330251712" /><circle cx="1498.871847892992" cy="791.5822380143984" r="17.319304586685547" fill="#B4976A" opacity="0.20929187486813577" /><circle cx="783.3256289207616" cy="590.3865089317658" r="43.69794505433919" fill="#B4976A" opacity="0.1472112084899202" /><circle cx="1128.9332541906585" cy="806.0398611994831" r="42.87699236988741" fill="#B4976A" opacity="0.12204725342062048" /><circle cx="1236.4457939159552" cy="449.658534093442" r="31.184664680794498" fill="#B4976A" opacity="0.11788496996079104" /><circle cx="145.03920166291223" cy="700.3940965052639" r="31.917493373078752" fill="#B4976A" opacity="0.10323670645545861" /><circle cx="906.5864079693206" cy="467.9814322786233" r="28.447190057902773" fill="#B4976A" opacity="0.14966512083976075" /><circle cx="476.41719177031626" cy="655.6643639278267" r="36.41988878363733" fill="#B4976A" opacity="0.2071850878439705" /><circle cx="911.6742157486028" cy="712.3138815279249" r="39.8201425446385" fill="#B4976A" opacity="0.18996917642650119" /><circle cx="1279.4106882805104" cy="625.307650957543" r="47.74936346686386" fill="#B4976A" opacity="0.1305390792065664" /><circle cx="346.3419984526392" cy="458.42987027338694" r="32.33940549226422" fill="#B4976A" opacity="0.18669851083000982" /><circle cx="249.96320628557652" cy="788.9938962776157" r="46.27874897260102" fill="#B4976A" opacity="0.21533623239522448" />
+  <rect width="1600" height="1000" fill="url(#vig-event-live-music)"/>
+  <rect width="1600" height="1000" filter="url(#grain-event-live-music)" opacity="0.5"/>
+</svg>

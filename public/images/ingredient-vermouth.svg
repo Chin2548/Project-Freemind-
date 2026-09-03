@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow-ingredient-vermouth" cx="0.4" cy="0.4" r="0.75" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#765640" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#765640" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#765640" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-ingredient-vermouth" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-ingredient-vermouth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-ingredient-vermouth">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#base-ingredient-vermouth)"/>
+  <rect width="1200" height="1500" fill="url(#glow-ingredient-vermouth)"/>
+  <rect x="0.06574094301624311" y="414.34403263437" width="4.789916615737525" height="816.9279412756935" fill="#B4976A" opacity="0.06646853308795815" /><rect x="639.2571648948426" y="148.19054093509033" width="14.591347133360195" height="1164.03976347208" fill="#B4976A" opacity="0.05714251356864582" /><rect x="821.4174507385283" y="286.16157193776365" width="5.3560859201066995" height="1212.5680670259223" fill="#B4976A" opacity="0.04871157225101401" /><circle cx="849.4816238521428" cy="1175.8876929300723" r="13.293295272899137" fill="#B4976A" opacity="0.17574733771919027" /><circle cx="561.4747948585775" cy="1360.9815024640238" r="31.37781567441096" fill="#B4976A" opacity="0.09719710994250803" /><circle cx="615.6665554416054" cy="1361.6137926574925" r="28.524034630995278" fill="#B4976A" opacity="0.17012559291918353" /><circle cx="692.9192830742517" cy="1352.396285780609" r="33.80001986566933" fill="#B4976A" opacity="0.13211441383894013" /><circle cx="402.46353298655106" cy="1290.6660383480285" r="19.97403829542365" fill="#B4976A" opacity="0.10136024683840597" /><circle cx="357.16749910001414" cy="953.4877293310014" r="19.076961631958337" fill="#B4976A" opacity="0.21121663781927585" /><circle cx="668.8448338479221" cy="1201.6495642384045" r="33.06844808260766" fill="#B4976A" opacity="0.08820719269868657" /><circle cx="328.18901345896444" cy="1062.5197690329699" r="24.21122832988503" fill="#B4976A" opacity="0.13900202370155793" /><circle cx="231.53987958239378" cy="1349.9000580281952" r="13.317116138820646" fill="#B4976A" opacity="0.1311648822772921" />
+  <rect width="1200" height="1500" fill="url(#vig-ingredient-vermouth)"/>
+  <rect width="1200" height="1500" filter="url(#grain-ingredient-vermouth)" opacity="0.5"/>
+</svg>

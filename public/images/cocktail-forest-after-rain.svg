@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <defs>
+    <radialGradient id="glow-cocktail-forest-after-rain" cx="0.45" cy="0.35" r="0.75" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#A58F7A" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#A58F7A" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#A58F7A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vig-cocktail-forest-after-rain" cx="0.5" cy="0.55" r="0.85" gradientUnits="objectBoundingBox">
+      <stop offset="55%" stop-color="#120D0A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#120D0A" stop-opacity="0.75"/>
+    </radialGradient>
+    <linearGradient id="base-cocktail-forest-after-rain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241712"/>
+      <stop offset="100%" stop-color="#120D0A"/>
+    </linearGradient>
+    
+  <filter id="grain-cocktail-forest-after-rain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.9 0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+    <feComposite operator="over" in2="SourceGraphic"/>
+  </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#base-cocktail-forest-after-rain)"/>
+  <rect width="1200" height="1500" fill="url(#glow-cocktail-forest-after-rain)"/>
+  <rect x="0.0939158723632953" y="141.92004650078718" width="11.557023742754966" height="1017.0399163077027" fill="#B4976A" opacity="0.04638361869043076" /><rect x="227.51023548423333" y="211.70077285422084" width="15.273353048854837" height="1191.485376438578" fill="#B4976A" opacity="0.047346447955208315" /><circle cx="1002.0249297861242" cy="760.1850692510466" r="19.431683059252503" fill="#B4976A" opacity="0.1284009546957919" /><circle cx="641.5396202742492" cy="845.02659474502" r="29.075852175313845" fill="#B4976A" opacity="0.09077746063543247" /><circle cx="1000.9878089660665" cy="1151.4484594007474" r="16.196633860651993" fill="#B4976A" opacity="0.20148179729607124" /><circle cx="1067.7197142203522" cy="851.101081237291" r="23.080053716041196" fill="#B4976A" opacity="0.11770028857300086" /><circle cx="1103.5786890458116" cy="1044.8314387885216" r="15.839845634847736" fill="#B4976A" opacity="0.08166683215803172" /><circle cx="123.84996537477706" cy="1113.1338272598887" r="26.988718475204635" fill="#B4976A" opacity="0.14645031915647008" /><circle cx="432.9826146671387" cy="832.9323652972769" r="19.833256285482324" fill="#B4976A" opacity="0.1589746803035724" /><circle cx="1092.4486263584797" cy="1139.0440333532579" r="23.28933253818129" fill="#B4976A" opacity="0.19557040068839715" /><circle cx="271.92480887465626" cy="1040.1856384381517" r="24.364457935434263" fill="#B4976A" opacity="0.18176023611031494" /><circle cx="379.616616833598" cy="1298.8338106883075" r="29.450392020354414" fill="#B4976A" opacity="0.1309759678700715" />
+  <rect width="1200" height="1500" fill="url(#vig-cocktail-forest-after-rain)"/>
+  <rect width="1200" height="1500" filter="url(#grain-cocktail-forest-after-rain)" opacity="0.5"/>
+</svg>
