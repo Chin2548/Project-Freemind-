@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Unrelated tooling that lives alongside this project, not part of it.
+    ".agents/**",
   ]),
 ]);
 

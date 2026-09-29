@@ -32,12 +32,18 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
 
 # vercel
 .vercel
 
 # local Claude Code state
 .claude/
+
+# unrelated local tooling/output that ends up alongside this project
+.agents/
+*.srt
+skills-lock.json
 
 # typescript
 *.tsbuildinfo

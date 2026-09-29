@@ -12,6 +12,7 @@ const GROUPS = [
       { href: "/admin/homepage", label: "Homepage", hint: "Text & images" },
       { href: "/admin/story", label: "Story Page", hint: "Text & images" },
       { href: "/admin/menu", label: "Menu", hint: "Drinks & prices" },
+      { href: "/admin/categories", label: "Categories", hint: "Menu tabs" },
       { href: "/admin/events", label: "Events", hint: "What's on" },
     ],
   },

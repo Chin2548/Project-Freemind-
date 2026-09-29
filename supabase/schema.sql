@@ -4,12 +4,53 @@
 create extension if not exists "pgcrypto";
 
 -- ─────────────────────────────────────────────────────────────────────────
+-- menu_categories — the tabs shown on the Menu page, managed from
+-- Admin → Menu → Categories. `id` is a slug generated from the label at
+-- creation and is what menu_items.category stores; it never changes even
+-- if the label is renamed later.
+-- ─────────────────────────────────────────────────────────────────────────
+create table if not exists public.menu_categories (
+  id text primary key,
+  label text not null,
+  sort_order integer not null default 0,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+insert into public.menu_categories (id, label, sort_order) values
+  ('signatures', 'Signatures', 0),
+  ('classics', 'Classics', 1),
+  ('spirits', 'Spirits', 2),
+  ('wine', 'Wine', 3),
+  ('beer', 'Beer', 4),
+  ('non-alcoholic', 'Non-Alcoholic', 5)
+on conflict (id) do nothing;
+
+alter table public.menu_categories enable row level security;
+
+drop policy if exists "public can read menu categories" on public.menu_categories;
+create policy "public can read menu categories" on public.menu_categories
+  for select to anon using (true);
+
+drop policy if exists "authenticated can read menu categories" on public.menu_categories;
+create policy "authenticated can read menu categories" on public.menu_categories
+  for select to authenticated using (true);
+
+drop policy if exists "authenticated can write menu categories" on public.menu_categories;
+create policy "authenticated can write menu categories" on public.menu_categories
+  for all to authenticated using (true) with check (true);
+
+drop trigger if exists set_updated_at on public.menu_categories;
+create trigger set_updated_at before update on public.menu_categories
+  for each row execute function public.set_updated_at();
+
+-- ─────────────────────────────────────────────────────────────────────────
 -- menu_items
 -- ─────────────────────────────────────────────────────────────────────────
 create table if not exists public.menu_items (
   id uuid primary key default gen_random_uuid(),
   name text not null,
-  category text not null check (category in ('signatures', 'classics', 'spirits', 'wine', 'beer', 'non-alcoholic')),
+  category text not null references public.menu_categories (id) on update cascade on delete restrict,
   price numeric(10, 2) not null default 0,
   currency text not null default '$',
   image_url text not null default '',

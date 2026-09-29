@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getMenuItems } from "@/lib/data/menu";
+import { getMenuCategories } from "@/lib/data/categories";
 import { MenuBrowser } from "@/components/menu/MenuBrowser";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MenuPage() {
-  const items = await getMenuItems();
+  const [items, categories] = await Promise.all([getMenuItems(), getMenuCategories()]);
 
   return (
     <div className="pt-32 pb-24 md:pt-40 md:pb-36">
@@ -26,7 +27,7 @@ export default async function MenuPage() {
         </p>
 
         <div className="mt-16">
-          <MenuBrowser items={items} />
+          <MenuBrowser items={items} categories={categories} />
         </div>
       </div>
     </div>

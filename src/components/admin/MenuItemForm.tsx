@@ -3,7 +3,7 @@
 import { useActionState } from "react";
 import { FormField, inputClass } from "./FormField";
 import { ImageUrlField } from "./ImageUrlField";
-import { MENU_CATEGORY_LABELS, type MenuCategory, type MenuItem } from "@/lib/types";
+import type { MenuCategoryDef, MenuItem } from "@/lib/types";
 
 type FormAction = (
   prevState: { error: string | null },
@@ -13,9 +13,11 @@ type FormAction = (
 export function MenuItemForm({
   action,
   item,
+  categories,
 }: {
   action: FormAction;
   item?: MenuItem;
+  categories: MenuCategoryDef[];
 }) {
   const [state, formAction, pending] = useActionState(action, { error: null });
 
@@ -25,11 +27,18 @@ export function MenuItemForm({
         <input name="name" defaultValue={item?.name} required className={inputClass} />
       </FormField>
 
-      <FormField label="Category">
-        <select name="category" defaultValue={item?.category ?? "signatures"} className={inputClass}>
-          {(Object.keys(MENU_CATEGORY_LABELS) as MenuCategory[]).map((c) => (
-            <option key={c} value={c}>
-              {MENU_CATEGORY_LABELS[c]}
+      <FormField
+        label="Category"
+        hint={
+          categories.length === 0
+            ? "No categories yet — add one in Menu → Categories first."
+            : undefined
+        }
+      >
+        <select name="category" defaultValue={item?.category ?? categories[0]?.id} className={inputClass}>
+          {categories.map((c) => (
+            <option key={c.id} value={c.id}>
+              {c.label}
             </option>
           ))}
         </select>

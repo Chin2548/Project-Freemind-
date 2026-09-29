@@ -1,10 +1,10 @@
-export type MenuCategory =
-  | "signatures"
-  | "classics"
-  | "spirits"
-  | "wine"
-  | "beer"
-  | "non-alcoholic";
+export type MenuCategory = string;
+
+export interface MenuCategoryDef {
+  id: string;
+  label: string;
+  sortOrder: number;
+}
 
 export interface MenuItem {
   id: string;
@@ -124,15 +124,6 @@ export interface StoryContent {
   sections: StorySectionContent[];
   updatedAt: string;
 }
-
-export const MENU_CATEGORY_LABELS: Record<MenuCategory, string> = {
-  signatures: "Signatures",
-  classics: "Classics",
-  spirits: "Spirits",
-  wine: "Wine",
-  beer: "Beer",
-  "non-alcoholic": "Non-Alcoholic",
-};
 
 export const EVENT_CATEGORY_LABELS: Record<EventCategory, string> = {
   "live-music": "Live Music",

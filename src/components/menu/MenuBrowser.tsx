@@ -4,20 +4,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { MENU_CATEGORY_LABELS, type MenuCategory, type MenuItem } from "@/lib/types";
+import type { MenuCategoryDef, MenuItem } from "@/lib/types";
 import { formatPrice } from "@/lib/utils";
 
-const CATEGORIES: MenuCategory[] = [
-  "signatures",
-  "classics",
-  "spirits",
-  "wine",
-  "beer",
-  "non-alcoholic",
-];
-
-export function MenuBrowser({ items }: { items: MenuItem[] }) {
-  const [activeCategory, setActiveCategory] = useState<MenuCategory>("signatures");
+export function MenuBrowser({
+  items,
+  categories,
+}: {
+  items: MenuItem[];
+  categories: MenuCategoryDef[];
+}) {
+  const [activeCategory, setActiveCategory] = useState<string>(categories[0]?.id ?? "");
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const filtered = useMemo(
@@ -25,23 +22,19 @@ export function MenuBrowser({ items }: { items: MenuItem[] }) {
     [items, activeCategory]
   );
 
-  const availableCategories = CATEGORIES.filter((c) =>
-    items.some((item) => item.category === c)
-  );
-
   return (
     <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
       <div className="md:col-span-8">
         <nav className="flex flex-wrap gap-x-8 gap-y-3 border-b border-walnut/50 pb-6">
-          {availableCategories.map((cat) => (
+          {categories.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
               className={`font-sans text-xs uppercase tracking-[0.24em] transition-colors ${
-                activeCategory === cat ? "text-ivory" : "text-taupe hover:text-cream"
+                activeCategory === cat.id ? "text-ivory" : "text-taupe hover:text-cream"
               }`}
             >
-              {MENU_CATEGORY_LABELS[cat]}
+              {cat.label}
             </button>
           ))}
         </nav>
