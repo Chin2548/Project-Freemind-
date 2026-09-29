@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getEventById, getEvents } from "@/lib/data/events";
-import { getSiteSettings } from "@/lib/data/settings";
 import { ReservationButton } from "@/components/ReservationButton";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { EVENT_CATEGORY_LABELS } from "@/lib/types";
@@ -31,11 +30,14 @@ export default async function EventDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const [event, settings] = await Promise.all([getEventById(id), getSiteSettings()]);
+  const event = await getEventById(id);
   if (!event) notFound();
 
   const d = formatEventDate(event.date);
-  const bookingUrl = event.bookingUrl === "#reserve" ? settings.reservationUrl : event.bookingUrl;
+  const bookingUrl =
+    event.bookingUrl === "#reserve"
+      ? `/reserve?event=${encodeURIComponent(event.title)}`
+      : event.bookingUrl;
 
   return (
     <div className="pt-28 pb-24 md:pt-32 md:pb-36">

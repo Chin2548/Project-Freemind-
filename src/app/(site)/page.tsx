@@ -48,7 +48,7 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <EntryScreen />
-      <Hero settings={settings} content={content} />
+      <Hero content={content} />
       <TheSpace content={content} />
       <Philosophy content={content} />
       <TheCraft content={content} />
@@ -65,7 +65,7 @@ export default async function HomePage() {
       />
       <TheNight content={content} />
       <FindUsPreview settings={settings} content={content} />
-      <ReservationCTA settings={settings} content={content} />
+      <ReservationCTA content={content} />
     </>
   );
 }

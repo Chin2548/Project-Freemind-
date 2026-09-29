@@ -311,6 +311,43 @@ create trigger set_updated_at before update on public.story_content
   for each row execute function public.set_updated_at();
 
 -- ─────────────────────────────────────────────────────────────────────────
+-- reservations — table requests submitted from the public /reserve page.
+-- Contains guest PII (name/email/phone), so anon may only INSERT; only an
+-- authenticated admin session can ever read or manage the list.
+-- ─────────────────────────────────────────────────────────────────────────
+create table if not exists public.reservations (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  email text not null,
+  phone text not null,
+  party_size integer not null default 2,
+  date date not null,
+  time time not null,
+  notes text not null default '',
+  status text not null default 'pending' check (status in ('pending', 'confirmed', 'cancelled')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.reservations enable row level security;
+
+drop policy if exists "public can submit reservations" on public.reservations;
+create policy "public can submit reservations" on public.reservations
+  for insert to anon with check (true);
+
+drop policy if exists "authenticated can read reservations" on public.reservations;
+create policy "authenticated can read reservations" on public.reservations
+  for select to authenticated using (true);
+
+drop policy if exists "authenticated can write reservations" on public.reservations;
+create policy "authenticated can write reservations" on public.reservations
+  for all to authenticated using (true) with check (true);
+
+drop trigger if exists set_updated_at on public.reservations;
+create trigger set_updated_at before update on public.reservations
+  for each row execute function public.set_updated_at();
+
+-- ─────────────────────────────────────────────────────────────────────────
 -- After running this file, create your admin login in
 -- Supabase → Authentication → Users → Add user (email + password).
 -- That account is the only one that should ever sign in at /admin.

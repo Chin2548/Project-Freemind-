@@ -1,15 +1,9 @@
 import Image from "next/image";
 import { ReservationButton } from "@/components/ReservationButton";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
-import type { HomepageContent, SiteSettings } from "@/lib/types";
+import type { HomepageContent } from "@/lib/types";
 
-export function ReservationCTA({
-  settings,
-  content,
-}: {
-  settings: SiteSettings;
-  content: HomepageContent;
-}) {
+export function ReservationCTA({ content }: { content: HomepageContent }) {
   return (
     <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden bg-obsidian py-24">
       <Image
@@ -33,7 +27,7 @@ export function ReservationCTA({
         </RevealOnScroll>
         <RevealOnScroll delay={0.2}>
           <div className="mt-10 flex justify-center">
-            <ReservationButton href={settings.reservationUrl}>
+            <ReservationButton href="/reserve">
               Reserve Your Evening
             </ReservationButton>
           </div>

@@ -28,8 +28,8 @@
   --color-brass: var(--color-brass);
   --color-oxblood: var(--color-oxblood);
 
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-sans: var(--font-inter), Inter, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", -apple-system, sans-serif;
 
   --animate-fade-up: fade-up 1s var(--ease-reveal) forwards;
   --animate-fade-in: fade-in 1.2s var(--ease-reveal) forwards;

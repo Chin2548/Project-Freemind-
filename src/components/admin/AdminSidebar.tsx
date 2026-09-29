@@ -9,6 +9,7 @@ const GROUPS = [
     heading: "Content",
     links: [
       { href: "/admin", label: "Overview", hint: "Quick stats" },
+      { href: "/admin/reservations", label: "Reservations", hint: "Table requests" },
       { href: "/admin/homepage", label: "Homepage", hint: "Text & images" },
       { href: "/admin/story", label: "Story Page", hint: "Text & images" },
       { href: "/admin/menu", label: "Menu", hint: "Drinks & prices" },

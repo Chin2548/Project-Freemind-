@@ -1,19 +1,24 @@
 import Link from "next/link";
 import { getAllMenuItemsAdmin } from "@/lib/data/menu";
 import { getAllEventsAdmin } from "@/lib/data/events";
+import { getReservationsAdmin } from "@/lib/data/reservations";
 
 export default async function AdminOverviewPage() {
-  const [menuItems, events] = await Promise.all([getAllMenuItemsAdmin(), getAllEventsAdmin()]);
+  const [menuItems, events, reservations] = await Promise.all([
+    getAllMenuItemsAdmin(),
+    getAllEventsAdmin(),
+    getReservationsAdmin(),
+  ]);
 
   const todayStr = new Date().toISOString().slice(0, 10);
   const upcoming = events.filter((e) => e.date >= todayStr);
   const stats = [
-    { label: "Menu Items", value: menuItems.length, href: "/admin/menu" },
     {
-      label: "Available Now",
-      value: menuItems.filter((i) => i.available).length,
-      href: "/admin/menu",
+      label: "Pending Reservations",
+      value: reservations.filter((r) => r.status === "pending").length,
+      href: "/admin/reservations",
     },
+    { label: "Menu Items", value: menuItems.length, href: "/admin/menu" },
     { label: "Upcoming Events", value: upcoming.length, href: "/admin/events" },
     {
       label: "Featured Events",

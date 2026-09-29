@@ -125,6 +125,22 @@ export interface StoryContent {
   updatedAt: string;
 }
 
+export type ReservationStatus = "pending" | "confirmed" | "cancelled";
+
+export interface Reservation {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  partySize: number;
+  date: string;
+  time: string;
+  notes: string;
+  status: ReservationStatus;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export const EVENT_CATEGORY_LABELS: Record<EventCategory, string> = {
   "live-music": "Live Music",
   "dj-night": "DJ Night",

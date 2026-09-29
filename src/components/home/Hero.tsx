@@ -3,15 +3,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ReservationButton } from "@/components/ReservationButton";
-import type { HomepageContent, SiteSettings } from "@/lib/types";
+import type { HomepageContent } from "@/lib/types";
 
-export function Hero({
-  settings,
-  content,
-}: {
-  settings: SiteSettings;
-  content: HomepageContent;
-}) {
+export function Hero({ content }: { content: HomepageContent }) {
   return (
     <section className="relative flex h-[100svh] min-h-[640px] w-full items-end overflow-hidden bg-obsidian">
       <Image
@@ -73,9 +67,7 @@ export function Hero({
           >
             Enter
           </a>
-          <ReservationButton href={settings.reservationUrl}>
-            Reserve
-          </ReservationButton>
+          <ReservationButton href="/reserve">Reserve</ReservationButton>
         </motion.div>
       </div>
 

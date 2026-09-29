@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { ReservationButton } from "./ReservationButton";
-import type { SiteSettings } from "@/lib/types";
 
 const NAV_LINKS = [
   { href: "/menu", label: "Menu" },
@@ -15,7 +14,7 @@ const NAV_LINKS = [
   { href: "/find-us", label: "Find Us" },
 ];
 
-export function Navbar({ settings }: { settings: SiteSettings }) {
+export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -73,7 +72,7 @@ export function Navbar({ settings }: { settings: SiteSettings }) {
                 {link.label}
               </Link>
             ))}
-            <ReservationButton href={settings.reservationUrl}>Reserve</ReservationButton>
+            <ReservationButton href="/reserve">Reserve</ReservationButton>
           </nav>
 
           <button
@@ -135,7 +134,7 @@ export function Navbar({ settings }: { settings: SiteSettings }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
-              <ReservationButton href={settings.reservationUrl}>
+              <ReservationButton href="/reserve">
                 Reserve
               </ReservationButton>
             </motion.div>

@@ -11,7 +11,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
   return (
     <div className="relative">
       <CustomCursor />
-      <Navbar settings={settings} />
+      <Navbar />
       <main>{children}</main>
       <Footer settings={settings} />
 
